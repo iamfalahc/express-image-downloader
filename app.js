@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
-// Serve static files from the "public" directory
 app.use(express.static("public"));
 
 app.get("/",(req,res)=>{
@@ -19,7 +18,6 @@ app.get("/download3",(req,res)=>{
     res.download(path.join(__dirname,"public/images/image3.jpeg"))
 })
 
-// Start the server
 app.listen(3000, () => {
     console.log("App is running on port 3000");
 });
